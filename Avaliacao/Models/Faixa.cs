@@ -1,4 +1,6 @@
-﻿using System;
+﻿/* by Isabelle isabelle.minel@catolicasc.org.br */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
