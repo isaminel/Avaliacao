@@ -24,7 +24,7 @@ namespace Avaliacao.Controllers
             _context.Dispose();
         }
 
-        // GET: Customers
+        // GET: Faixa
         public ActionResult Index()
         {
             var faixa = _context.Faixas.ToList();
@@ -33,7 +33,7 @@ namespace Avaliacao.Controllers
 
         public ActionResult Details(int id)
         {
-            var faixa = _context.Faixas.SingleOrDefault(c => c.Id == id);
+            var faixa = _context.Faixas.SingleOrDefault(a => a.Id == id);
 
             if (faixa == null)
                 return HttpNotFound();

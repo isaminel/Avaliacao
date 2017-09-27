@@ -209,6 +209,10 @@
     <Compile Include="Migrations\201709262336220_Tabela.Designer.cs">
       <DependentUpon>201709262336220_Tabela.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709271808091_InsertAluno.cs" />
+    <Compile Include="Migrations\201709271808091_InsertAluno.Designer.cs">
+      <DependentUpon>201709271808091_InsertAluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Aluno.cs" />
@@ -218,6 +222,9 @@
     <Compile Include="Models\TipoDeAssociacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AlunoIndexViewModel.cs" />
+    <Compile Include="ViewModels\FaixaIndexViewModel.cs" />
+    <Compile Include="ViewModels\TipoDeAssociacaoIndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -310,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709262336220_Tabela.resx">
       <DependentUpon>201709262336220_Tabela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709271808091_InsertAluno.resx">
+      <DependentUpon>201709271808091_InsertAluno.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

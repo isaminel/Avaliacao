@@ -24,21 +24,21 @@ namespace Avaliacao.Controllers
             _context.Dispose();
         }
 
-        // GET: Customers
+        // GET: Tipos
         public ActionResult Index()
         {
-            var tipoAssociacao = _context.TiposAssociacao.ToList();
-            return View(tipoAssociacao);
+            var tpa = _context.TiposAssociacao.ToList();
+            return View(tpa);
         }
 
         public ActionResult Details(int id)
         {
-            var tipoAssociacao = _context.TiposAssociacao.SingleOrDefault(c => c.Id == id);
+            var tpa = _context.TiposAssociacao.SingleOrDefault(a => a.Id == id);
 
-            if (tipoAssociacao == null)
+            if (tpa == null)
                 return HttpNotFound();
 
-            return View(tipoAssociacao);
+            return View(tpa);
         }
     }
 }

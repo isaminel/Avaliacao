@@ -26,7 +26,7 @@ namespace Avaliacao.Models
         public DbSet<TipoDeAssociacao> TiposAssociacao { get; set; }
 
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("DefaultConnection")
         {
         }
 

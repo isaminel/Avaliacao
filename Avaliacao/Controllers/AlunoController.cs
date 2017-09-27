@@ -1,4 +1,4 @@
-﻿/* by Isabelle isabelle.minel@catolicasc.org.br */
+﻿    /* by Isabelle isabelle.minel@catolicasc.org.br */
 
 using System;
 using System.Collections.Generic;
@@ -24,16 +24,16 @@ namespace Avaliacao.Controllers
             _context.Dispose();
         }
 
-        // GET: Customers
+        // GET: Aluno
         public ActionResult Index()
         {
-            var aluno = _context.Alunos.ToList();
+            var aluno = _context.Alunos.Include(c => c.Faixa).Include(c => c.TipoDeAssociacao).ToList();
             return View(aluno);
         }
 
         public ActionResult Details(int id)
         {
-            var aluno = _context.Alunos.SingleOrDefault(c => c.Id == id);
+            var aluno = _context.Alunos.Include(c => c.Faixa).Include(c => c.TipoDeAssociacao).SingleOrDefault(m => m.Id == id);
 
             if (aluno == null)
                 return HttpNotFound();
