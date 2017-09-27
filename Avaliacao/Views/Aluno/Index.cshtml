@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Avaliacao.Models.Aluno>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Aluno</h2>
+
+@if (Model.Any())
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr><th>Aluno</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var aluno in Model)
+            {
+                <tr><td>@Html.ActionLink(@aluno.Nome, "Details", new { aluno.Nome })</td></tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Não há nenhum aluno.</p>
+
+}

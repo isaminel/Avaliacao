@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Avaliacao.Models.Faixa>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Faixa</h2>
+
+@if (Model.Any())
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr><th>Faixa</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var faixa in Model)
+            {
+                <tr><td>@Html.ActionLink(@faixa.Nome, "Details", new { faixa.Nome })</td></tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Não há nenhuma faixa.</p>
+
+}

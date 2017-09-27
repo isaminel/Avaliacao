@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Avaliacao.Models.TipoDeAssociacao>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Faixa</h2>
+
+@if (Model.Any())
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr><th>Faixa</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var tipos in Model)
+            {
+                <tr><td>@Html.ActionLink(@tipos.Nome, "Details", new { tipos.Nome })</td></tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Não há nenhum tipo de associação.</p>
+}
+

@@ -1,0 +1,16 @@
+﻿@model Avaliacao.Models.Aluno
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Nome</h2>
+
+<ul>
+    <li>Faixa: @Model.Faixa</li>
+    <li>Tipo de Associação: @Model.TipoDeAssociacao</li>
+    <li>Nome: @Model.Nome</li>
+    <li>CPF: @Model.Cpf</li>
+</ul>
+

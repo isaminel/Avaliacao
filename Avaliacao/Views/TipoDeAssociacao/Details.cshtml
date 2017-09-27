@@ -1,0 +1,14 @@
+﻿@model Avaliacao.Models.TipoDeAssociacao
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Nome</h2>
+
+<ul>
+    <li>Nome: @Model.Nome</li>
+    <li>Período: @Model.Periodo</li>
+    <li>Mensalidade: @Model.Mensalidade</li>
+</ul>

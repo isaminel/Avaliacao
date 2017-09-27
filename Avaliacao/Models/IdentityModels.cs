@@ -20,6 +20,11 @@ namespace Avaliacao.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
+        public DbSet<Aluno> Alunos { get; set; }
+        public DbSet<Faixa> Faixas { get; set; }
+        public DbSet<TipoDeAssociacao> TiposAssociacao { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
